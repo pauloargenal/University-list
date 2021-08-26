@@ -12,4 +12,11 @@ const fetchbyName = async (search) => {
   return data;
 };
 
-export { fetchUniversities };
+const fetchByCountry = async (country) => {
+  const url = `http://universities.hipolabs.com/search?country=${country}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+};
+
+export { fetchUniversities, fetchbyName, fetchByCountry };

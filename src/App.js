@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 import { fetchUniversities } from "./api";
+import { BrowserRouter as Router } from "react-router-dom";
+import { AppHeader } from "./components";
+import Routes from "./Routes";
 import "./App.scss";
 
 function App() {
@@ -8,26 +11,10 @@ function App() {
     console.log(uni);
   }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img
-          src={"https://source.unsplash.com/collection/190727/1600x900"}
-          className="App-logo"
-          alt="logo"
-        />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <AppHeader />
+      <Routes />
+    </Router>
   );
 }
 

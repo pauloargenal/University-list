@@ -1,0 +1,66 @@
+/**
+ * Variables
+ */
+
+// Colors
+$white: #ffffff;
+$sun: #f9b01f;
+$pacific-blue: #00acc1;
+$bubbles: #e5fcff;
+$danger: #b54928;
+$default: #acacac;
+$dove-gray: #6c6c6c;
+$input-bg: #e8e9ea;
+$link-icon: #8e8e93;
+$concrete: #f2f2f2;
+$darkest: #525252;
+$light-gray: #c7c7cc;
+$french-pass: #bce0fd;
+$conduroy: #596460;
+$manatee: #8e8e93;
+$mine-shaft: #3e3e3e;
+$chambray: #3b5998;
+$torch-red: #ff2020;
+$paarl: #b54928;
+$coffee-bean: #240a0a;
+$punch: #dd4b39;
+$valencia: #da4c3a;
+$apple: #4ac733;
+$deep-cerulean: #018ea0;
+$gamboge: #e19b0e;
+$shadow: #0f0d2308;
+$swiss-coffee: #d2cccc;
+$tundora: #434343;
+$purple: #7f00c2;
+$forest-green: #1d852a;
+$dark-blue: #0018c2;
+
+// :: Opacity colors
+$sun-opacity: #f9b01f80;
+$pacific-blue-opacity: #00abc19c;
+
+// Font Weight
+
+$normal: 400;
+$medium: 500;
+$bold: 700;
+
+@font-face {
+  font-family: "Century-Gothic";
+  src: url("../fonts/Century-Gothic.ttf");
+}
+
+@font-face {
+  font-family: "Century-Gothic-bold";
+  src: url("../fonts/gothicb.ttf");
+}
+
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  src: url("../fonts/OpenSans-SemiBold.ttf");
+}
+
+// Font Family
+$font-main: Century-Gothic, Arial;
+$font-main-bold: Century-Gothic-bold, Arial;
+$font-secondary: OpenSans-SemiBold, Arial;
