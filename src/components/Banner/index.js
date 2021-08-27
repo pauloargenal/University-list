@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Button } from "@material-ui/core";
+import Proptypes from "prop-types";
 import image from "../../assets/images/2485381.png";
 
 const useStyles = makeStyles(() => ({
@@ -36,7 +37,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const Banner = () => {
+const Banner = ({ history }) => {
   const classes = useStyles();
   return (
     <div className={classes.banner}>
@@ -44,7 +45,11 @@ const Banner = () => {
         <Typography variant="h2" className={classes.text}>
           Make your college application better instantly
         </Typography>
-        <Button variant="contained" className={classes.signin}>
+        <Button
+          variant="contained"
+          className={classes.signin}
+          onClick={() => history.push("/explore")}
+        >
           {"Explore"}
         </Button>
       </div>
@@ -53,6 +58,10 @@ const Banner = () => {
       </div>
     </div>
   );
+};
+
+Banner.propTypes = {
+  history: Proptypes.object.isRequired
 };
 
 export default Banner;

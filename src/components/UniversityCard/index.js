@@ -13,17 +13,32 @@ import {
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 300
+    width: 350,
+    marginBottom: 20,
+    marginRight: 20,
+    flex: "20% 0 0"
   },
   media: {
     height: 140
+  },
+  cardBody: {
+    height: 80,
+    fontSize: 22,
+    lineHeight: 1.5,
+    marginBottom: 20
+  },
+  cardFooter: {
+    paddingLeft: 15,
+    paddingRight: 15,
+    display: "flex",
+    justifyContent: "space-between"
   }
 });
 
 const UniversityCard = ({ name, country, image, page }) => {
   const classes = useStyles();
   const handleClick = (page) => {
-    console.log(page);
+    window.location.href = `${page}`;
   };
   return (
     <Card className={classes.root}>
@@ -34,7 +49,12 @@ const UniversityCard = ({ name, country, image, page }) => {
           title="Contemplative Reptile"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="h2"
+            className={classes.cardBody}
+          >
             {name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
@@ -42,11 +62,11 @@ const UniversityCard = ({ name, country, image, page }) => {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions className={classes.cardFooter}>
         <Button size="small" color="primary">
           Share
         </Button>
-        <Button size="small" color="primary" onClick={handleClick(page)}>
+        <Button size="small" color="primary" onClick={() => handleClick(page)}>
           Visit Website
         </Button>
       </CardActions>

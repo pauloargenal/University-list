@@ -25,7 +25,11 @@ const useStyles = makeStyles(() => ({
     color: "#000",
     boxShadow: "0 2px 4px 0 rgba(0,0,0,.2)",
     paddingLeft: 100,
-    paddingRight: 100
+    paddingRight: 100,
+    marginBottom: 20,
+    "&:hover": {
+      cursor: "pointer"
+    }
   },
   title: {
     flexGrow: 1
@@ -80,6 +84,7 @@ const StyledMenuItem = withStyles(() => ({
 
 const AppHeader = () => {
   const classes = useStyles();
+  const history = useHistory();
   const [menu, setMenu] = useState(null);
 
   const handleClick = (event) => {
@@ -89,8 +94,6 @@ const AppHeader = () => {
   const handleClose = () => {
     setMenu(null);
   };
-
-  const history = useHistory();
 
   const handleLogout = () => {
     localStorage.clear();
@@ -102,7 +105,11 @@ const AppHeader = () => {
       <AppBar position="static" className={classes.header}>
         <Toolbar>
           <Typography variant="h5" className={classes.title}>
-            <Box component="div" className={classes.user}>
+            <Box
+              component="div"
+              className={classes.user}
+              onClick={() => history.push("/")}
+            >
               <SchoolIcon className={classes.icon} />
               University Listings
             </Box>

@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { Banner } from "../../components";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import HowItWorks from "./components/HowItWorks";
@@ -12,9 +13,10 @@ const useStyles = makeStyles(() => ({
 
 const Home = () => {
   const classes = useStyles();
+  const history = useHistory();
   return (
     <div className={classes.home}>
-      <Banner />
+      <Banner history={history} />
       <div className="sections">
         <HowItWorks />
         <Feedbacks />
