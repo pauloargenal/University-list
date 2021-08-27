@@ -10,7 +10,8 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    flexDirection: "column"
+    flexDirection: "column",
+    marginBottom: 50
   },
   title: {
     marginBottom: 30

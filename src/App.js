@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { fetchUniversities } from "./api";
 import { BrowserRouter as Router } from "react-router-dom";
-import { AppHeader } from "./components";
+import { AppHeader, Footer } from "./components";
 import Routes from "./Routes";
 import "./App.scss";
 
@@ -14,6 +14,7 @@ function App() {
     <Router>
       <AppHeader />
       <Routes />
+      <Footer />
     </Router>
   );
 }

@@ -23,7 +23,9 @@ const useStyles = makeStyles(() => ({
   header: {
     background: "#fff",
     color: "#000",
-    boxShadow: "0 2px 4px 0 rgba(0,0,0,.2)"
+    boxShadow: "0 2px 4px 0 rgba(0,0,0,.2)",
+    paddingLeft: 100,
+    paddingRight: 100
   },
   title: {
     flexGrow: 1
