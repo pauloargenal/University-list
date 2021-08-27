@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
 import { fetchUniversities, fetchbyName } from "../../api";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { UniversityCard } from "../../components";
+import { UniversityCard, Loader } from "../../components";
 import Search from "../../components/Search";
 
 const useStyles = makeStyles(() => ({
@@ -101,7 +101,7 @@ const Explore = () => {
           dataLength={current.length}
           next={getMoreData}
           hasMore={hasMore}
-          loader={<h4>Loading...</h4>}
+          loader={<Loader />}
           className={classes.universities}
         >
           <div className={classes.universities}>
@@ -109,9 +109,7 @@ const Explore = () => {
               current.map((uni, index) => (
                 <UniversityCard
                   key={index}
-                  image={
-                    "https://images.unsplash.com/20/cambridge.JPG?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=730&q=80"
-                  }
+                  image={"https://source.unsplash.com/800x900/?university"}
                   name={uni.name}
                   country={uni.country}
                   page={uni.page}
@@ -124,7 +122,7 @@ const Explore = () => {
           dataLength={current.length}
           next={getMoreData}
           hasMore={hasMore}
-          loader={<h4>Loading...</h4>}
+          loader={<Loader />}
           className={classes.universities}
         >
           <div className={classes.universities}>
@@ -132,9 +130,7 @@ const Explore = () => {
               current.map((uni, index) => (
                 <UniversityCard
                   key={index}
-                  image={
-                    "https://images.unsplash.com/20/cambridge.JPG?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=730&q=80"
-                  }
+                  image={"https://source.unsplash.com/800x900/?university"}
                   name={uni.name}
                   country={uni.country}
                   page={uni.page}

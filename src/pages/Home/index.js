@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { Banner } from "../../components";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import HowItWorks from "./components/HowItWorks";
 import Feedbacks from "./components/Feedbacks";
 

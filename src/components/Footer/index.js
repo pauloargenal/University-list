@@ -55,6 +55,10 @@ const useStyles = makeStyles(() => ({
 }));
 const Footer = () => {
   const classes = useStyles();
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    console.log("subscribe");
+  };
   return (
     <div className={classes.footer}>
       <footer>
@@ -68,7 +72,11 @@ const Footer = () => {
             variant="filled"
             className={classes.input}
           />
-          <Button variant="contained" className={classes.submit}>
+          <Button
+            variant="contained"
+            className={classes.submit}
+            onClick={handleSubscribe}
+          >
             {"Submit"}
           </Button>
         </div>
