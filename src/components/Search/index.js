@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import SearchIcon from "@material-ui/icons/Search";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles({
   searchForm: {
@@ -28,18 +29,28 @@ const useStyles = makeStyles({
   }
 });
 
-const Search = () => {
+const Search = ({ handleSearch }) => {
+  const input = useRef();
   const classes = useStyles();
+  const handleInput = (e) => {
+    e.preventDefault();
+    handleSearch(input.current.value);
+  };
   return (
-    <div className={classes.searchForm}>
+    <form className={classes.searchForm} onSubmit={(e) => handleInput(e)}>
       <input
+        ref={input}
         className={classes.field}
         type="text"
         name="ukuusearch"
         placeholder="Search item"
       />
       <SearchIcon className={classes.icon} />
-    </div>
+    </form>
   );
+};
+
+Search.propTypes = {
+  handleSearch: PropTypes.func.isRequired
 };
 export default Search;

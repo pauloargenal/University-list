@@ -16,7 +16,8 @@ const useStyles = makeStyles({
     width: 350,
     marginBottom: 20,
     marginRight: 20,
-    flex: "20% 0 0"
+    flex: "20% 0 0",
+    flexBasis: "auto"
   },
   media: {
     height: 140
