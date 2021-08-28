@@ -40,7 +40,6 @@ export const ModalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(modalReducer, initialState);
 
   const showModal = (payload) => {
-    console.log("showModal", payload);
     dispatch({
       type: SHOW_MODAL,
       payload

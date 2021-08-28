@@ -17,6 +17,7 @@ import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import SchoolIcon from "@material-ui/icons/School";
 import ModalContext from "../../contexts/ModalContext";
 import Signin from "../SigninForm";
+import Login from "../LoginForm";
 const useStyles = makeStyles(() => ({
   container: {
     flexGrow: 1
@@ -139,7 +140,7 @@ const AppHeader = () => {
               >
                 <div className={classes.userinfo}>
                   <Avatar className={classes.avatar}>
-                    {username.charAt(0)}
+                    {info.username.charAt(0)}
                   </Avatar>
                   <Typography variant="h6" className={classes.title}>
                     {info.username}
@@ -167,7 +168,7 @@ const AppHeader = () => {
                 className={classes.login}
                 onClick={() =>
                   showModal({
-                    content: Signin,
+                    content: Login,
                     title: "Login"
                   })
                 }

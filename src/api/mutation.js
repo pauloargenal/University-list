@@ -29,4 +29,17 @@ const signup = gql`
   }
 `;
 
-export { subscription, signup };
+const login = gql`
+  mutation ($loginEmail: String!, $loginPassword: String!) {
+    login(email: $loginEmail, password: $loginPassword) {
+      token
+      user {
+        email
+        id
+        username
+      }
+    }
+  }
+`;
+
+export { subscription, signup, login };
