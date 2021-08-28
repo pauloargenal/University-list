@@ -175,7 +175,7 @@ const AppHeader = () => {
                     title: "Login"
                   })
                 }
-                data-testid="signIn"
+                data-testid="login"
               >
                 {"Log in"}
               </Button>

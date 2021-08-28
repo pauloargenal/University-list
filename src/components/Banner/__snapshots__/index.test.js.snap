@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Banner component correctly  1`] = `
+<DocumentFragment>
+  <div
+    class="makeStyles-banner-1"
+  >
+    <div
+      class="makeStyles-left-2"
+      data-testid="left"
+    >
+      <h2
+        class="MuiTypography-root makeStyles-text-5 MuiTypography-h2"
+      >
+        Make your college application better instantly
+      </h2>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-signin-6"
+        data-testid="explore"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Explore
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
+      class="makeStyles-right-3"
+      data-testid="right"
+    >
+      <img
+        class="makeStyles-image-4"
+        src="2485381.png"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

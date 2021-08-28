@@ -33,6 +33,7 @@ const PageNotFound = () => {
       <Button
         variant="contained"
         className={classes.home}
+        data-testid="home"
         onClick={() => history.push("/")}
       >
         {"Go back to home page"}

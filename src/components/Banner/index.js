@@ -59,7 +59,7 @@ const Banner = ({ history }) => {
   const classes = useStyles();
   return (
     <div className={classes.banner}>
-      <div className={classes.left}>
+      <div className={classes.left} data-testid="left">
         <Typography variant="h2" className={classes.text}>
           Make your college application better instantly
         </Typography>
@@ -67,11 +67,12 @@ const Banner = ({ history }) => {
           variant="contained"
           className={classes.signin}
           onClick={() => history.push("/explore")}
+          data-testid="explore"
         >
           {"Explore"}
         </Button>
       </div>
-      <div className={classes.right}>
+      <div className={classes.right} data-testid="right">
         <img src={image} className={classes.image} />
       </div>
     </div>

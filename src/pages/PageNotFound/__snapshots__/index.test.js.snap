@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders PageNotFound component correctly  1`] = `
+<DocumentFragment>
+  <div
+    class="makeStyles-container-1"
+  >
+    <img
+      src="404.png"
+    />
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-home-2"
+      data-testid="home"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        Go back to home page
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;

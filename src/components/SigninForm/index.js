@@ -84,6 +84,7 @@ const Signin = () => {
     <Container component="main" maxWidth="xs">
       {message ? (
         <Alert
+          data-testid="alert"
           className={classes.alert}
           message={message}
           clearMessage={clearMessage}
@@ -103,6 +104,7 @@ const Signin = () => {
             label="Username"
             name="user name"
             autoComplete="username"
+            inputProps={{ "data-testid": "user-field" }}
             inputRef={nameRef}
             autoFocus
           />
@@ -115,6 +117,7 @@ const Signin = () => {
             label="Email Address"
             name="email"
             inputRef={emailRef}
+            inputProps={{ "data-testid": "email-field" }}
             autoComplete="email"
           />
           <TextField
@@ -127,6 +130,7 @@ const Signin = () => {
             type="password"
             id="password"
             inputRef={passwordRef}
+            inputProps={{ "data-testid": "password-field" }}
             autoComplete="current-password"
           />
           <FormControlLabel
@@ -139,6 +143,7 @@ const Signin = () => {
             variant="contained"
             color="primary"
             className={classes.submit}
+            data-testid="signin-btn"
           >
             Sign up
           </Button>

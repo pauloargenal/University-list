@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders navbar correctly  1`] = `
+<DocumentFragment>
+  <div
+    class="makeStyles-container-1"
+  >
+    <header
+      class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary makeStyles-header-2 MuiPaper-elevation4"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+      >
+        <h5
+          class="MuiTypography-root makeStyles-title-3 MuiTypography-h5"
+        >
+          <div
+            class="MuiBox-root MuiBox-root-11 makeStyles-user-5"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root makeStyles-icon-6"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"
+              />
+            </svg>
+            University Listings
+          </div>
+        </h5>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-login-8"
+          data-testid="login"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Log in
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-signin-7"
+          data-testid="signIn"
+          label="Sign up"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Sign up
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </header>
+  </div>
+</DocumentFragment>
+`;

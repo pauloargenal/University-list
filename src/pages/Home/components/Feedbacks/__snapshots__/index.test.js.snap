@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Feedback component correctly  1`] = `
+<DocumentFragment>
+  <div
+    class="makeStyles-howitworks-1"
+  >
+    <div
+      class="makeStyles-title-2"
+    >
+      <h2
+        class="MuiTypography-root makeStyles-text-5 MuiTypography-h2"
+      >
+        Over 100,000 + students found our application helpful
+      </h2>
+    </div>
+    <div
+      class="makeStyles-cards-10"
+    >
+      <div
+        class="MuiPaper-root MuiCard-root makeStyles-card-11 MuiPaper-outlined MuiPaper-rounded"
+      >
+        <img
+          class="makeStyles-quote-12"
+          src="6041174ae60be81bdc89d32b_quote.svg"
+        />
+        <div
+          class="MuiCardContent-root makeStyles-card-11"
+        >
+          <h6
+            class="MuiTypography-root makeStyles-cardTitle-3 MuiTypography-h6"
+          >
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          </h6>
+          <div
+            class="MuiBox-root MuiBox-root-13 makeStyles-footer-9"
+          >
+            <div
+              class="MuiAvatar-root MuiAvatar-circular makeStyles-icon-6"
+            >
+              <img
+                alt="John Doe"
+                class="MuiAvatar-img"
+                src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1048&q=80"
+              />
+            </div>
+            <div
+              class="MuiBox-root MuiBox-root-14"
+            >
+              <h6
+                class="MuiTypography-root makeStyles-name-7 MuiTypography-h6"
+              >
+                John Doe
+              </h6>
+              <h6
+                class="MuiTypography-root makeStyles-school-8 MuiTypography-h6"
+              >
+                Computer Science student of Xavier University
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiPaper-root MuiCard-root makeStyles-card-11 MuiPaper-outlined MuiPaper-rounded"
+      >
+        <img
+          class="makeStyles-quote-12"
+          src="6041174ae60be81bdc89d32b_quote.svg"
+        />
+        <div
+          class="MuiCardContent-root makeStyles-card-11"
+        >
+          <h6
+            class="MuiTypography-root makeStyles-cardTitle-3 MuiTypography-h6"
+          >
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          </h6>
+          <div
+            class="MuiBox-root MuiBox-root-15 makeStyles-footer-9"
+          >
+            <div
+              class="MuiAvatar-root MuiAvatar-circular makeStyles-icon-6"
+            >
+              <img
+                alt="John Doe"
+                class="MuiAvatar-img"
+                src="https://images.unsplash.com/photo-1596496356940-0a111ee799c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+              />
+            </div>
+            <div
+              class="MuiBox-root MuiBox-root-16"
+            >
+              <h6
+                class="MuiTypography-root makeStyles-name-7 MuiTypography-h6"
+              >
+                Doe John
+              </h6>
+              <h6
+                class="MuiTypography-root makeStyles-school-8 MuiTypography-h6"
+              >
+                Civil Engineering student in Sullivan University
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

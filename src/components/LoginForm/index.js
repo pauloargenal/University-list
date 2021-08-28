@@ -76,9 +76,10 @@ const Login = () => {
 
   return (
     <Container component="main" maxWidth="xs">
-      <div className={classes.paper}>
+      <div className={classes.paper} data-testid="login-form">
         {message ? (
           <Alert
+            data-testid="alert"
             className={classes.alert}
             message={message}
             clearMessage={clearMessage}
@@ -96,6 +97,7 @@ const Login = () => {
             id="email"
             label="Email Address"
             name="email"
+            inputProps={{ "data-testid": "email-field" }}
             inputRef={emailRef}
             autoComplete="email"
           />
@@ -108,6 +110,7 @@ const Login = () => {
             label="Password"
             type="password"
             id="password"
+            inputProps={{ "data-testid": "password-field" }}
             inputRef={passwordRef}
             autoComplete="current-password"
           />
@@ -121,6 +124,7 @@ const Login = () => {
             variant="contained"
             color="primary"
             className={classes.submit}
+            data-testid="signin-btn"
           >
             Log in
           </Button>
