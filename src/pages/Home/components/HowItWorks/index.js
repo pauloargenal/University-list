@@ -5,7 +5,7 @@ import WebIcon from "@material-ui/icons/Web";
 import AssignmentIndIcon from "@material-ui/icons/AssignmentInd";
 import EmailIcon from "@material-ui/icons/Email";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   howitworks: {
     display: "flex",
     justifyContent: "center",
@@ -40,23 +40,30 @@ const useStyles = makeStyles({
   },
   cards: {
     display: "flex ",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
     width: "100%",
-    paddingLeft: 200,
-    paddingRight: 200
+    paddingLeft: 50,
+    paddingRight: 50,
+    [theme.breakpoints.down("md")]: {
+      alignItems: "center",
+      flexDirection: "column"
+    }
   },
   card: {
     padding: 20,
-    width: 300,
+    width: 400,
     height: 350,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
     textAlign: "justify",
-    borderRadius: 8
+    borderRadius: 8,
+    [theme.breakpoints.down("md")]: {
+      marginBottom: 20
+    }
   }
-});
+}));
 
 const HowItWorks = () => {
   const classes = useStyles();
@@ -76,7 +83,8 @@ const HowItWorks = () => {
               Search
             </Typography>
             <Typography variant="h6" className={classes.cardText}>
-              Browse the universities that you like on our web application
+              Browse across our website to find what best universities you like
+              with ease.
             </Typography>
           </CardContent>
         </Card>
@@ -87,7 +95,8 @@ const HowItWorks = () => {
               Apply
             </Typography>
             <Typography variant="h6" className={classes.cardText}>
-              Browse the universities that you like on our web application
+              After searching pick a university you likea and apply by going to
+              their website!
             </Typography>
           </CardContent>
         </Card>
@@ -98,7 +107,7 @@ const HowItWorks = () => {
               Enroll
             </Typography>
             <Typography variant="h6" className={classes.cardText}>
-              Browse the universities that you like on our web application
+              Lastly, after submitting your application enroll!
             </Typography>
           </CardContent>
         </Card>

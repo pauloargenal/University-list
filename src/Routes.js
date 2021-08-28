@@ -3,7 +3,7 @@ import { Switch } from "react-router-dom";
 import { URL_HELPERS } from "./utils/url";
 import { GuestRoute } from "./components/Routes";
 import CustomLayout from "./layouts/index";
-import { Explore, Home } from "./pages";
+import { Explore, Home, PageNotFound } from "./pages";
 const Routes = () => {
   return (
     <Switch>
@@ -19,6 +19,7 @@ const Routes = () => {
         path={URL_HELPERS.explore}
         exact
       />
+      <GuestRoute component={PageNotFound} layout={CustomLayout} />
     </Switch>
   );
 };

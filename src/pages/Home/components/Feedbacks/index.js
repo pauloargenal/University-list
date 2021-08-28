@@ -1,10 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Card, CardContent, Typography } from "@material-ui/core";
+import { Box, Card, CardContent, Typography, Avatar } from "@material-ui/core";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import quote from "../../../../assets/images/6041174ae60be81bdc89d32b_quote.svg";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   howitworks: {
     display: "flex",
     justifyContent: "center",
@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     flexDirection: "column"
   },
   title: {
-    marginBottom: 30
+    marginBottom: 15
   },
   cardTitle: {
     fontSize: 20,
@@ -27,7 +27,8 @@ const useStyles = makeStyles({
     marginBottom: 10
   },
   icon: {
-    fontSize: 54,
+    width: 50,
+    height: 50,
     marginRight: 10
   },
   name: {
@@ -47,7 +48,14 @@ const useStyles = makeStyles({
     justifyContent: "space-between",
     width: "100%",
     paddingLeft: 150,
-    paddingRight: 150
+    paddingRight: 150,
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: 0,
+      paddingRight: 0,
+      flexDirection: "column",
+      alignContent: "center",
+      alignItems: "center"
+    }
   },
   card: {
     border: "none",
@@ -68,7 +76,7 @@ const useStyles = makeStyles({
     top: 50,
     minWidth: 70
   }
-});
+}));
 
 const Feedback = () => {
   const classes = useStyles();
@@ -89,13 +97,17 @@ const Feedback = () => {
               }
             </Typography>
             <Box component="div" className={classes.footer}>
-              <AccountCircleIcon className={classes.icon} />
+              <Avatar
+                alt="John Doe"
+                src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1048&q=80"
+                className={classes.icon}
+              />
               <Box component="div" className={classes.information}>
                 <Typography variant="h6" className={classes.name}>
                   John Doe
                 </Typography>
                 <Typography variant="h6" className={classes.school}>
-                  College of University
+                  Computer Science student of Xavier University
                 </Typography>
               </Box>
             </Box>
@@ -110,13 +122,17 @@ const Feedback = () => {
               }
             </Typography>
             <Box component="div" className={classes.footer}>
-              <AccountCircleIcon className={classes.icon} />
+              <Avatar
+                alt="John Doe"
+                src="https://images.unsplash.com/photo-1596496356940-0a111ee799c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                className={classes.icon}
+              />
               <Box component="div" className={classes.information}>
                 <Typography variant="h6" className={classes.name}>
-                  John Doe
+                  Doe John
                 </Typography>
                 <Typography variant="h6" className={classes.school}>
-                  College of University
+                  Civil Engineering student in Sullivan University
                 </Typography>
               </Box>
             </Box>

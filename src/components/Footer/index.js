@@ -6,7 +6,8 @@ const useStyles = makeStyles(() => ({
   footer: {
     height: 350,
     backgroundColor: "#6596F3",
-    padding: 100
+    padding: 100,
+    position: "relative"
   },
   title: {
     color: "#fff",
@@ -22,7 +23,8 @@ const useStyles = makeStyles(() => ({
     "&::before": {
       borderBottom: "none"
     },
-    "&::after": {
+    "& .MuiFilledInput-underline:after": {
+      outline: "none",
       borderBottom: "none"
     }
   },

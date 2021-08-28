@@ -6,13 +6,17 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { UniversityCard, Loader } from "../../components";
 import Search from "../../components/Search";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   explore: {
     paddingLeft: 100,
     paddingRight: 100,
     marginBottom: 100,
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: 0,
+      paddingRight: 0
+    }
   },
   title: {
     fontSize: 32,
@@ -23,7 +27,10 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     flexWrap: "wrap",
     alignContent: "center",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "space-around"
+    }
   },
   filters: {
     display: "flex",

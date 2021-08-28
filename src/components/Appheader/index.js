@@ -8,8 +8,6 @@ import {
   Toolbar,
   Typography,
   Button,
-  ListItemIcon,
-  ListItemText,
   Box
 } from "@material-ui/core";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
@@ -32,7 +30,9 @@ const useStyles = makeStyles(() => ({
     }
   },
   title: {
-    flexGrow: 1
+    flexGrow: 1,
+    fontSize: 28,
+    fontWeight: 500
   },
   user: {
     display: "flex",

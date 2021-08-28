@@ -11,13 +11,16 @@ import {
   Typography
 } from "@material-ui/core";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: 350,
     marginBottom: 20,
     marginRight: 20,
     flex: "20% 0 0",
-    flexBasis: "auto"
+    flexBasis: "auto",
+    [theme.breakpoints.down("md")]: {
+      width: 300
+    }
   },
   media: {
     height: 140
@@ -34,7 +37,7 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "space-between"
   }
-});
+}));
 
 const UniversityCard = ({ name, country, image, page }) => {
   const classes = useStyles();

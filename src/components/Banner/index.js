@@ -4,17 +4,30 @@ import { Typography, Button } from "@material-ui/core";
 import Proptypes from "prop-types";
 import image from "../../assets/images/2485381.png";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   banner: {
-    display: "flex"
+    display: "flex",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column"
+    }
   },
   left: {
     width: "50%",
-    padding: 100
+    padding: 100,
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      paddingLeft: "none",
+      paddingRight: "none",
+      textAlign: "center",
+      alignItems: "space-between"
+    }
   },
   right: {
     padding: 100,
-    width: "50%"
+    width: "50%",
+    [theme.breakpoints.down("md")]: {
+      display: "none"
+    }
   },
   image: {
     height: "100%",
@@ -23,9 +36,14 @@ const useStyles = makeStyles(() => ({
   text: {
     marginTop: 20,
     marginBottom: 10,
-    lineHeight: 1.2,
+    lineHeight: 1.5,
+    fontSize: 56,
     fontWeight: "bold",
-    textAlign: "left"
+    textAlign: "left",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      textAlign: "center"
+    }
   },
   signin: {
     backgroundColor: "#3CB371",
