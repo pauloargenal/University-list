@@ -4,6 +4,10 @@ University list Application
 
 - is a web application where you can browse/search a list of universities from all over the world.
 
+### Getting Started
+
+- These instructions will get you a copy of the project up and running on your local machine for development
+
 ### Node Versions
 
 For web application
@@ -16,7 +20,7 @@ For server
 
 ### Prereq Setup
 
-1. [NVM](https://github.com/nvm-sh/nvm#installing-and-updating) or [Nodenv](https://github.com/nodenv/nodenv#installation) - For developers; Install Node 16.x
+1. [NVM](https://github.com/nvm-sh/nvm#installing-and-updating) - For developers; Install Node 16.x
 
 ### Setup web application
 
@@ -38,3 +42,24 @@ For server
 
 - When running test with the code coverage
   - `$ npm run test`
+
+### Built With
+
+Front-End:
+
+- React.js(create-react-app) - JS library that use mostly in the front-end
+- React-Router - were used for routing of the pages
+- HTML/SCSS - for creating my initial design and my template
+- Material-Ui - react UI framework builting most of my components
+
+Back-End:
+
+- Post-man - use to test my graphql api in the back end.
+- Apollo-server - is used for query building, fetching data and creating data inside my database.
+
+Security:
+
+- JsonWebToken(JWT) - is used to authenticate the user inside the system
+- Bcrypt.Js - used to hash users password.
+
+### Presentation:
