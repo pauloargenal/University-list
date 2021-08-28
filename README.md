@@ -62,4 +62,9 @@ Security:
 - JsonWebToken(JWT) - is used to authenticate the user inside the system
 - Bcrypt.Js - used to hash users password.
 
+### Bonus Requirements:
+
+- Have a login and registration feature. Login and registration must have a validation on
+  the input.
+
 ### Presentation:
