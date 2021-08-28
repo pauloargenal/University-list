@@ -13,6 +13,7 @@ import { useMutation } from "@apollo/client";
 import { signup } from "../../api/mutation";
 import ModalContext from "../../contexts/ModalContext";
 import AuthContext from "../../contexts/AuthContext";
+import Alert from "../Errorhandler";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -48,7 +49,7 @@ const Signin = () => {
   const [signupFunc] = useMutation(signup, {
     onError: (err) => {
       console.log(err);
-      setMessage(err.message);
+      setMessage("Email already taken");
     },
     onCompleted: (data) => {
       setAuth(data.signup);
@@ -56,11 +57,15 @@ const Signin = () => {
     }
   });
 
+  const clearMessage = () => {
+    setMessage("");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
-      passwordRef.current.value ||
-      emailRef.current.value ||
+      passwordRef.current.value &&
+      emailRef.current.value &&
       nameRef.current.value
     ) {
       signupFunc({
@@ -77,6 +82,16 @@ const Signin = () => {
 
   return (
     <Container component="main" maxWidth="xs">
+      {message ? (
+        <Alert
+          className={classes.alert}
+          message={message}
+          clearMessage={clearMessage}
+          severity="error"
+        />
+      ) : (
+        ""
+      )}
       <div className={classes.paper}>
         <form className={classes.form} onSubmit={handleSubmit} noValidate>
           <TextField

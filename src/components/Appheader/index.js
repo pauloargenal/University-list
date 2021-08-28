@@ -38,6 +38,9 @@ const useStyles = makeStyles(() => ({
     fontSize: 28,
     fontWeight: 500
   },
+  name: {
+    fontSize: 20
+  },
   user: {
     display: "flex",
     alignItems: "center"
@@ -142,7 +145,7 @@ const AppHeader = () => {
                   <Avatar className={classes.avatar}>
                     {info.username.charAt(0)}
                   </Avatar>
-                  <Typography variant="h6" className={classes.title}>
+                  <Typography variant="h6" className={classes.name}>
                     {info.username}
                   </Typography>
                 </div>

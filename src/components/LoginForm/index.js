@@ -1,5 +1,4 @@
 import React, { useRef, useContext, useState } from "react";
-import { useHistory } from "react-router-dom";
 import {
   Button,
   TextField,
@@ -14,6 +13,7 @@ import { useMutation } from "@apollo/client";
 import { login } from "../../api/mutation";
 import ModalContext from "../../contexts/ModalContext";
 import AuthContext from "../../contexts/AuthContext";
+import Alert from "../../components/Errorhandler";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -40,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Login = () => {
   const classes = useStyles();
-  const history = useHistory();
   const emailRef = useRef();
   const passwordRef = useRef();
   const { closeModal } = useContext(ModalContext);
@@ -49,18 +48,17 @@ const Login = () => {
   const [loginFunc] = useMutation(login, {
     onError: (err) => {
       console.log(err);
-      setMessage(err.message);
+      setMessage("Please include a valid email or password");
     },
     onCompleted: (data) => {
       setAuth(data.login);
-      //history.push("/");
       closeModal();
     }
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (passwordRef.current.value || emailRef.current.value) {
+    if (passwordRef.current.value && emailRef.current.value) {
       loginFunc({
         variables: {
           loginPassword: passwordRef.current.value,
@@ -72,9 +70,23 @@ const Login = () => {
     }
   };
 
+  const clearMessage = () => {
+    setMessage("");
+  };
+
   return (
     <Container component="main" maxWidth="xs">
       <div className={classes.paper}>
+        {message ? (
+          <Alert
+            className={classes.alert}
+            message={message}
+            clearMessage={clearMessage}
+            severity="error"
+          />
+        ) : (
+          ""
+        )}
         <form className={classes.form} onSubmit={handleSubmit} noValidate>
           <TextField
             variant="outlined"
