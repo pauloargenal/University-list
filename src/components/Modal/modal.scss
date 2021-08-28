@@ -1,0 +1,76 @@
+@import "../../assets/variables";
+
+.modal-container {
+  & {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin: auto;
+    padding: 20px;
+    border-width: 1px;
+    width: 500px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 20px;
+  }
+
+  .title {
+    & {
+      font-weight: bold;
+      font-size: 25px;
+      color: $dove-gray;
+    }
+  }
+
+  .header {
+    & {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 24px;
+    }
+  }
+
+  .modalcontent {
+    padding: 20px;
+    display: flex;
+    & .logo {
+      align-self: center;
+      height: 80px;
+      margin: auto;
+      display: block;
+    }
+  }
+
+  hr {
+    color: $dove-gray;
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .close {
+    & {
+      cursor: pointer;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.overlay {
+  & {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    overflow-y: auto;
+  }
+}

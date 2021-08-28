@@ -16,6 +16,7 @@ const useStyles = makeStyles({
     backgroundColor: "#3CB371",
     color: "#FFFFFF",
     marginTop: 50,
+    marginBottom: 50,
     width: 260,
     "&:hover": {
       backgroundColor: "#38a167"

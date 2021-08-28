@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Card, CardContent, Typography, Avatar } from "@material-ui/core";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import quote from "../../../../assets/images/6041174ae60be81bdc89d32b_quote.svg";
 
 const useStyles = makeStyles((theme) => ({

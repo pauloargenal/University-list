@@ -44,23 +44,3 @@ $pacific-blue-opacity: #00abc19c;
 $normal: 400;
 $medium: 500;
 $bold: 700;
-
-@font-face {
-  font-family: "Century-Gothic";
-  src: url("../fonts/Century-Gothic.ttf");
-}
-
-@font-face {
-  font-family: "Century-Gothic-bold";
-  src: url("../fonts/gothicb.ttf");
-}
-
-@font-face {
-  font-family: "OpenSans-SemiBold";
-  src: url("../fonts/OpenSans-SemiBold.ttf");
-}
-
-// Font Family
-$font-main: Century-Gothic, Arial;
-$font-main-bold: Century-Gothic-bold, Arial;
-$font-secondary: OpenSans-SemiBold, Arial;

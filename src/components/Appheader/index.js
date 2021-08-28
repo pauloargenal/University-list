@@ -1,19 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import {
+  Avatar,
   AppBar,
   Menu,
   MenuItem,
   Toolbar,
   Typography,
   Button,
-  Box
+  Box,
+  ListItemIcon,
+  ListItemText
 } from "@material-ui/core";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import SchoolIcon from "@material-ui/icons/School";
-
+import ModalContext from "../../contexts/ModalContext";
+import Signin from "../SigninForm";
 const useStyles = makeStyles(() => ({
   container: {
     flexGrow: 1
@@ -53,6 +56,14 @@ const useStyles = makeStyles(() => ({
   },
   login: {
     textTransform: "uppercase"
+  },
+  userinfo: {
+    display: "flex",
+    alignItems: "center"
+  },
+  avatar: {
+    textTransform: "capitalize",
+    marginRight: 10
   }
 }));
 
@@ -85,7 +96,11 @@ const StyledMenuItem = withStyles(() => ({
 const AppHeader = () => {
   const classes = useStyles();
   const history = useHistory();
+  const token = localStorage.getItem("accessToken");
+  const user = localStorage.getItem("user");
+  const info = JSON.parse(user);
   const [menu, setMenu] = useState(null);
+  const { showModal } = useContext(ModalContext);
 
   const handleClick = (event) => {
     setMenu(event.currentTarget);
@@ -97,7 +112,7 @@ const AppHeader = () => {
 
   const handleLogout = () => {
     localStorage.clear();
-    history.push("/login");
+    history.push("/");
   };
 
   return (
@@ -114,10 +129,68 @@ const AppHeader = () => {
               University Listings
             </Box>
           </Typography>
-          <Button className={classes.login}>{"Log in"}</Button>
-          <Button variant="contained" className={classes.signin}>
-            {"Sign in"}
-          </Button>
+          {token ? (
+            <>
+              <Button
+                color="inherit"
+                aria-controls="simple-menu"
+                aria-haspopup="true"
+                onClick={handleClick}
+              >
+                <div className={classes.userinfo}>
+                  <Avatar className={classes.avatar}>
+                    {username.charAt(0)}
+                  </Avatar>
+                  <Typography variant="h6" className={classes.title}>
+                    {info.username}
+                  </Typography>
+                </div>
+              </Button>
+              <StyledMenu
+                id="customized-menu"
+                anchorEl={menu}
+                keepMounted
+                open={Boolean(menu)}
+                onClose={handleClose}
+              >
+                <StyledMenuItem onClick={handleLogout}>
+                  <ListItemIcon>
+                    <ExitToAppIcon fontSize="small" />
+                  </ListItemIcon>
+                  <ListItemText primary=" Sign out" />
+                </StyledMenuItem>
+              </StyledMenu>
+            </>
+          ) : (
+            <>
+              <Button
+                className={classes.login}
+                onClick={() =>
+                  showModal({
+                    content: Signin,
+                    title: "Login"
+                  })
+                }
+                data-testid="signIn"
+              >
+                {"Log in"}
+              </Button>
+              <Button
+                variant="contained"
+                className={classes.signin}
+                label="Sign up"
+                onClick={() =>
+                  showModal({
+                    content: Signin,
+                    title: "Sign up"
+                  })
+                }
+                data-testid="signIn"
+              >
+                {"Sign up"}
+              </Button>
+            </>
+          )}
         </Toolbar>
       </AppBar>
     </div>
