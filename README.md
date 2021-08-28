@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+## University list web and university-list-server
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+University list Application
 
-## Available Scripts
+- is a web application where you can browse/search a list of universities from all over the world.
 
-In the project directory, you can run:
+### Node Versions
 
-### `yarn start`
+For web application
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Node](https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V14.md#14.12.0) - 14.12.0 version
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+For server
 
-### `yarn test`
+- [Node](https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V14.md#16.2.0) - 16.2.0 version
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prereq Setup
 
-### `yarn build`
+1. [NVM](https://github.com/nvm-sh/nvm#installing-and-updating) or [Nodenv](https://github.com/nodenv/nodenv#installation) - For developers; Install Node 16.x
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Setup web application
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. `$ git clone git@github.com:Selenophilia/University-list.git && cd university-list-app`
+2. `$ nvm use 14.12.0`
+3. `$ npm install`
+4. `$ npm run start` to launch the app
+5. hit up localhost:3000
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Setup server
 
-### `yarn eject`
+1. `$ git clone git@github.com:Selenophilia/university-list-server.git && cd university-list-server`
+2. `$ nvm use 16.2.0`
+3. `$ npm install`
+4. `$ node src/index.js` to launch the app
+5. hit up localhost:4000
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Useful Commands
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- When running test with the code coverage
+  - `$ npm run test`
