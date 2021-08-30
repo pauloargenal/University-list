@@ -55,7 +55,8 @@ Front-End:
 Back-End:
 
 - Post-man - use to test my graphql api in the back end.
-- Apollo-server - is used for query building, fetching data and creating data inside my database.
+- GraphQL/Apollo-server - is used for query building, fetching data and creating data inside my database.
+- Prisma - database used to store user emails and password.
 
 Security:
 
@@ -67,4 +68,6 @@ Security:
 - Have a login and registration feature. Login and registration must have a validation on
   the input.
 
-### Presentation:
+### Presentation Link:
+
+- https://loom.com/share/68eda7d90d244e74a6baa392b035eb04
