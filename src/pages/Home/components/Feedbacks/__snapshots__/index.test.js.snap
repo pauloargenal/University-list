@@ -30,7 +30,7 @@ exports[`renders Feedback component correctly  1`] = `
           <h6
             class="MuiTypography-root makeStyles-cardTitle-3 MuiTypography-h6"
           >
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            "With the use of their application i manage to find the universities that i really like with just one click. It is really hassle free!."
           </h6>
           <div
             class="MuiBox-root MuiBox-root-13 makeStyles-footer-9"
@@ -74,7 +74,7 @@ exports[`renders Feedback component correctly  1`] = `
           <h6
             class="MuiTypography-root makeStyles-cardTitle-3 MuiTypography-h6"
           >
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            "I like how the application lets me browse every school that is available all over the place. It is also convenient since we are surfing thru the internet"
           </h6>
           <div
             class="MuiBox-root MuiBox-root-15 makeStyles-footer-9"
