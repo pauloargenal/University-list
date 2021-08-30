@@ -172,7 +172,7 @@ const AppHeader = () => {
                 onClick={() =>
                   showModal({
                     content: Login,
-                    title: "Login"
+                    title: "Log in"
                   })
                 }
                 data-testid="login"

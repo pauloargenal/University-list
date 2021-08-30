@@ -87,7 +87,7 @@ const Footer = () => {
           subscriptionEmail: input.current.value
         }
       });
-      setMessage("");
+      setMessage("Thank you for subscribing!");
     } else {
       setMessage("Please enter a valid email!");
     }

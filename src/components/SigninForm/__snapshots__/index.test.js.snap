@@ -172,7 +172,7 @@ exports[`renders Footer component correctly  1`] = `
               class="MuiTypography-root MuiLink-root MuiLink-underlineHover label MuiTypography-body2 MuiTypography-colorPrimary"
               href="#"
             >
-              Don't have an account? Sign Up
+              Already have an account? Log in
             </a>
           </div>
         </div>
