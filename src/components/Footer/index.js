@@ -71,6 +71,7 @@ const Footer = () => {
   const [subscribeFunc] = useMutation(subscription, {
     onCompleted: (data) => {
       console.log("data", data);
+      input.current.value = "";
     },
     onError: (err) => {
       console.log(err.message);
