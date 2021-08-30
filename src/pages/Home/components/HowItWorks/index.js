@@ -42,8 +42,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex ",
     justifyContent: "space-around",
     width: "100%",
-    paddingLeft: 50,
-    paddingRight: 50,
+    // paddingLeft: 50,
+    // paddingRight: 50,
     [theme.breakpoints.down("md")]: {
       alignItems: "center",
       flexDirection: "column"

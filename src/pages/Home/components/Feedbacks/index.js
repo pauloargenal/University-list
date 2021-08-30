@@ -46,8 +46,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex ",
     justifyContent: "space-between",
     width: "100%",
-    paddingLeft: 150,
-    paddingRight: 150,
+    paddingLeft: 100,
+    paddingRight: 100,
     [theme.breakpoints.down("md")]: {
       paddingLeft: 0,
       paddingRight: 0,
@@ -92,7 +92,7 @@ const Feedback = () => {
           <CardContent className={classes.card}>
             <Typography variant="h6" className={classes.cardTitle}>
               {
-                '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua."'
+                '"With the use of their application i manage to find the universities that i really like with just one click. It is really hassle free!."'
               }
             </Typography>
             <Box component="div" className={classes.footer}>
@@ -117,7 +117,7 @@ const Feedback = () => {
           <CardContent className={classes.card}>
             <Typography variant="h6" className={classes.cardTitle}>
               {
-                '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua."'
+                '"I like how the application lets me browse every school that is available all over the place. It is also convenient since we are surfing thru the internet"'
               }
             </Typography>
             <Box component="div" className={classes.footer}>

@@ -1,13 +1,5 @@
 import React, { useRef, useContext, useState } from "react";
-import {
-  Button,
-  TextField,
-  FormControlLabel,
-  Checkbox,
-  Link,
-  Grid,
-  Container
-} from "@material-ui/core";
+import { Button, TextField, Link, Grid, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { useMutation } from "@apollo/client";
 import { signup } from "../../api/mutation";
@@ -63,20 +55,28 @@ const Signin = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (
-      passwordRef.current.value &&
-      emailRef.current.value &&
-      nameRef.current.value
-    ) {
-      signupFunc({
-        variables: {
-          signupPassword: passwordRef.current.value,
-          signupEmail: emailRef.current.value,
-          signupUsername: nameRef.current.value
-        }
-      });
+    const emailRegEx =
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    console.log(emailRegEx.test(emailRef.current.value));
+
+    if (emailRegEx.test(emailRef.current.value)) {
+      if (
+        passwordRef.current.value &&
+        emailRef.current.value &&
+        nameRef.current.value
+      ) {
+        signupFunc({
+          variables: {
+            signupPassword: passwordRef.current.value,
+            signupEmail: emailRef.current.value,
+            signupUsername: nameRef.current.value
+          }
+        });
+      } else {
+        setMessage("Please fill up the required fields below");
+      }
     } else {
-      setMessage("Please fill up the required fields below");
+      setMessage("Please include a valid email address");
     }
   };
 
@@ -132,10 +132,6 @@ const Signin = () => {
             inputRef={passwordRef}
             inputProps={{ "data-testid": "password-field" }}
             autoComplete="current-password"
-          />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
           />
           <Button
             type="submit"
